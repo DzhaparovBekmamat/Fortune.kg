@@ -41,14 +41,14 @@ public class MainActivity extends AppCompatActivity {
                 wheel2.stopWheel();
                 wheel3.stopWheel();
                 if (wheel1.currentIndex == wheel2.currentIndex && wheel2.currentIndex == wheel3.currentIndex) {
-                    infoTextView.setText("Cиз чоң байгеге ээ болдуңуз! (5000 сом)");
+                    infoTextView.setText("Вы выиграли 1.000.000 рублей!");
                 } else if (wheel1.currentIndex == wheel2.currentIndex || wheel2.currentIndex == wheel3.currentIndex || wheel1.currentIndex == wheel3.currentIndex) {
-                    infoTextView.setText("Кичинекей сыйлык (100 сом)");
+                    infoTextView.setText("Небольшой приз (100 рублей)");
                 } else {
-                    infoTextView.setText("Сиз утулдуңуз! =(");
+                    infoTextView.setText("Вы проиграли");
                 }
 
-                button.setText("Start");
+                button.setText("Начать");
                 isStarted = false;
 
             } else {
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
                 wheel3.start();
 
-                button.setText("Токтотуу");
+                button.setText("Остановить");
                 infoTextView.setText("");
                 isStarted = true;
             }
